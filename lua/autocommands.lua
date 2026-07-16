@@ -24,9 +24,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = { "*.c", "*.cpp", "*.h", "*.hpp", "*.cc" },
+	pattern = { "*.c", "*.cpp", "*.h", "*.hpp", "*.cc", "*.lua" },
 	callback = function()
 		local save_cursor = vim.fn.getpos(".")
+		save_cursor[2] = save_cursor[2] - 1
 		vim.lsp.buf.format()
 		vim.fn.setpos(".", save_cursor)
 	end,

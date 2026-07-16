@@ -1,29 +1,29 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-vim.keymap.set("n", "<leader>i", "<cmd>term<CR>")
 vim.keymap.set("n", "<leader>o", "<C-o>")
 vim.keymap.set("n", "m", "O<esc>")
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR><CR>") -- extra <CR> due to its need in format-on-save
 vim.keymap.set("n", ",", "o<esc>")
-vim.keymap.set("n", "<leader>p", "diwi")
 vim.keymap.set("i", "<C-H>", "<C-W>", { desc = "Delete previous word" })
 
+-- nvim-tree keymaps
 vim.keymap.set("n", "<leader>nk", "<cmd>NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>m", "<cmd>NvimTreeFocus<CR>")
 
-vim.keymap.set("n", "<F5>", function()
-	require("dap").continue()
-end)
-vim.keymap.set("n", "<F9>", function()
-	require("dap").toggle_breakpoint()
-end)
-vim.keymap.set("n", "<F10>", function()
-	require("dap").step_over()
-end)
-vim.keymap.set("n", "<F12>", "<cmd>DapTerminate<CR>")
+-- DAP keymaps
+vim.keymap.set("n", "<F5>", "<cmd>DapNew<CR>", { desc = "Launch new debug session" })
+vim.keymap.set("n", "<F6>", "<cmd>DapContinue<CR>", { desc = "Launch or continue debug session" })
+vim.keymap.set("n", "<F9>", "<cmd>DapToggleBreakpoint<CR>", { desc = "Toggle breakpoint" })
+vim.keymap.set("n", "<F10>", "<cmd>DapStepOver<CR>", { desc = "Step over" })
+vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<CR>", { desc = "Step into" })
+vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<CR>", { desc = "Step out" })
+vim.keymap.set("n", "<F12>", "<cmd>DapTerminate<CR>", { desc = "Terminate DAP session" })
+-- DAP-UI
+vim.keymap.set("n", "<F2>", "<cmd>lua require('dapui').toggle()<Cr>", { desc = "Toggle dap-ui" })
 
+-- bufferline.nvim keymaps
 vim.keymap.set("n", "<leader>]", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>[", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader>u", "<cmd>bdelete<CR>")
+vim.keymap.set("n", "<leader>u", "<cmd>bdelete<CR>", { desc = "Delete current buffer" })
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
@@ -44,6 +44,10 @@ vim.keymap.set("n", "<space>;", "<cmd>:lua vim.diagnostic.open_float()<Cr>")
 vim.keymap.set("n", "<space>'", "<cmd>:lua vim.diagnostic.goto_next()<Cr>")
 vim.keymap.set("n", "<space>t", "<cmd>:lua vim.diagnostic.goto_prev()<Cr>")
 
+-- todo-comments.nvim keymaps
 vim.keymap.set("n", "]uh", function()
-	require("todo-comments").jump_next({keywords = { "ERROR", "WARNING", "TODO", "BUG" }})
+	require("todo-comments").jump_next({ keywords = { "ERROR", "WARNING", "TODO", "BUG" } })
 end, { desc = "Next error/warning/todo todo comment" })
+
+-- Oil.nvim keymaps
+vim.keymap.set("n", "<leader>vbn", "<cmd>:Oil --float .<Cr>")
