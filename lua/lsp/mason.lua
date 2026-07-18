@@ -20,6 +20,7 @@ return {
 			"lua_ls",
 			"stylua",
 			"pyright",
+			"neocmake",
 		},
 	},
 }

@@ -25,9 +25,8 @@ require("lazy").setup({
 	require("lsp.mason"), -- mason must be loaded before nvim-lspconfig
 	require("lsp.nvim-lspconfig"),
 	require("plugins.oil"),
-	require("plugins.convy"),           -- unit conversions
-	require("plugins.blink"),           -- auto completion
-	require("plugins.vim-moonfly-colors"), -- current theme
+	require("plugins.convy"), -- unit conversions
+	require("plugins.blink"), -- auto completion
 	require("plugins.which-key"),
 	require("plugins.guess-indent"),
 	require("plugins.nvim-web-devicons"),
@@ -38,9 +37,11 @@ require("lazy").setup({
 	require("plugins.statuscol"), -- the vertical status column on the left
 	require("plugins.todo-comments"),
 	require("plugins.lazy-tree"), -- Tree-like view of all plugins
-	require("plugins.cord"),    -- discord presence
+	require("plugins.cord"), -- discord presence
 	require("plugins.lazy-dev"), -- LuaLS setup stuff
+	require("plugins.tokyonight"),
 
+	-- require("plugins.vim-moonfly-colors"), -- current theme
 	--require("plugins.aura-theme"), a theme
 	--require("plugins.kanagawa"),  a theme
 	--	require("plugins.ale"), -- Not needed right now
