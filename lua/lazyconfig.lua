@@ -39,11 +39,8 @@ require("lazy").setup({
 	require("plugins.lazy-tree"), -- Tree-like view of all plugins
 	require("plugins.cord"), -- discord presence
 	require("plugins.lazy-dev"), -- LuaLS setup stuff
-	require("plugins.tokyonight"),
+	require("plugins.vim-moonfly-colors"), -- a theme
 
-	-- require("plugins.vim-moonfly-colors"), -- current theme
-	--require("plugins.aura-theme"), a theme
-	--require("plugins.kanagawa"),  a theme
 	--	require("plugins.ale"), -- Not needed right now
 	--require("plugins.git-signs"), won't bother with it rn
 }, {
