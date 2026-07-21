@@ -48,6 +48,25 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			end
 			map("<leader>th", toggle_inlay_hints, "[T]oggle Inlay [H]ints")
 
+			vim.api.nvim_set_hl(0, "LspInlayHint", {
+				fg = "#204c48",
+				bg = "#080808",
+				bold = false,
+				italic = true,
+				reverse = false,
+				standout = false,
+				nocombine = true,
+				default = true,
+				force = true,
+				blend = 20,
+
+				underline = false,
+				undercurl = false,
+				underdouble = false,
+				underdotted = false,
+				underdashed = false,
+				strikethrough = false,
+			})
 			-- Automatically toggle it on LspAttach
 			if not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }) then
 				toggle_inlay_hints()
