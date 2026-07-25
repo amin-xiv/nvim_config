@@ -21,6 +21,7 @@ return {
 			"stylua",
 			"pyright",
 			"neocmake",
+			"zls",
 		},
 	},
 }

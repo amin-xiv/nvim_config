@@ -40,6 +40,7 @@ require("lazy").setup({
 	require("plugins.cord"), -- discord presence
 	require("plugins.lazy-dev"), -- LuaLS setup stuff
 	require("plugins.vim-moonfly-colors"), -- a theme
+	require("plugins.smear-cursor"),
 
 	--	require("plugins.ale"), -- Not needed right now
 	--require("plugins.git-signs"), won't bother with it rn
