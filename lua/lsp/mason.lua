@@ -22,6 +22,7 @@ return {
 			"pyright",
 			"neocmake",
 			"zls",
+			"yamlls",
 		},
 	},
 }

@@ -23,5 +23,7 @@ return {
 		vim.lsp.enable("neocmake")
 
 		vim.lsp.enable("zls")
+
+		vim.lsp.enable("yamlls")
 	end,
 }
