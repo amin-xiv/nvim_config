@@ -23,7 +23,7 @@ return {
 		filetypes_disabled = {},
 
 		-- Sets animation framerate
-		time_interval = 12, -- milliseconds
+		time_interval = 10, -- milliseconds
 
 		-- How fast the smear's head moves towards the target.
 		-- 0: no movement, 1: instantaneous
@@ -31,7 +31,7 @@ return {
 
 		-- How fast the smear's tail moves towards the target.
 		-- 0: no movement, 1: instantaneous
-		trailing_stiffness = 0.82,
+		trailing_stiffness = 0.45,
 
 		-- Initial velocity factor in the direction opposite to the target
 		anticipation = 0.2,
