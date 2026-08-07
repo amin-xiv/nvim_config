@@ -31,7 +31,7 @@ return {
 
 		-- How fast the smear's tail moves towards the target.
 		-- 0: no movement, 1: instantaneous
-		trailing_stiffness = 0.45,
+		trailing_stiffness = 0.55,
 
 		-- Initial velocity factor in the direction opposite to the target
 		anticipation = 0.2,
