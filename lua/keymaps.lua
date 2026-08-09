@@ -1,4 +1,5 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("i", "<C-u>", "<Nop>")
 vim.keymap.set("n", "<leader>o", "<C-o>")
 vim.keymap.set("n", "m", "O<esc>")
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR><CR>") -- extra <CR> due to its need in format-on-save
