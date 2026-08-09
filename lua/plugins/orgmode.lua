@@ -1,13 +1,15 @@
 return {
 	"nvim-orgmode/orgmode",
-	event = "VeryLazy",
 	config = function()
+		-- Setup orgmode
 		require("orgmode").setup({
-			org_agenda_files = "~/orgmode-tests/**/*",
-			org_default_notes_file = "~/orgfiles/refile.org",
+			org_agenda_files = "~/orgmode/**/*",
+			org_default_notes_file = "~/orgmode/quick_notes.org",
 		})
 
-		-- Experimental LSP support
+		vim.opt.conceallevel = 2
+		vim.opt.concealcursor = "nc"
+
 		vim.lsp.enable("org")
 	end,
 }
