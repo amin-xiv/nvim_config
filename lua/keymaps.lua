@@ -5,6 +5,7 @@ vim.keymap.set("n", "m", "O<esc>")
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR><CR>") -- extra <CR> due to its need in format-on-save
 vim.keymap.set("n", ",", "o<esc>")
 vim.keymap.set("i", "<C-H>", "<C-W>", { desc = "Delete previous word" })
+vim.keymap.del("n", "gc")
 
 -- nvim-tree keymaps
 vim.keymap.set("n", "<leader>nk", "<cmd>NvimTreeToggle<CR>")

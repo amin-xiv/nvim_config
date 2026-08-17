@@ -13,7 +13,7 @@ return {
 				"--clang-tidy",
 				"--background-index",
 				"--header-insertion=iwyu",
-				"-j=5",
+				"-j=7",
 			},
 		})
 		vim.lsp.enable("clangd")

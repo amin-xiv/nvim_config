@@ -7,6 +7,8 @@ return {
 		legacy_computing_symbols_support_vertical_bars = true,
 		use_diagonal_blocks = true, -- Only effective if `legacy_computing_symbols_support` is `true`
 
+		cursor_color = "#2DBABA",
+
 		-- Set to `true` if your cursor is a vertical bar in insert mode.
 		vertical_bar_cursor_insert_mode = true,
 
