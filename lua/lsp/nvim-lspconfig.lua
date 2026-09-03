@@ -13,6 +13,7 @@ return {
 				"--clang-tidy",
 				"--background-index",
 				"--header-insertion=iwyu",
+				"--query-driver=/usr/bin/g++",
 				"-j=7",
 			},
 		})

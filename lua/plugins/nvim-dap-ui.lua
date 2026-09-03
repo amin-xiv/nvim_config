@@ -84,6 +84,8 @@ return {
 		local dapui = require("dapui")
 		dapui.setup(my_opts)
 
+		vim.keymap.set("n", "<F2>", dapui.toggle, { desc = "Toggle dap-ui" })
+
 		-- Automatically open and close the UI when debugging starts/stops
 		local dap = require("dap")
 		dap.listeners.before.attach.dapui_config = function()

@@ -13,11 +13,9 @@ rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-	-- TODO: Check whatever tf this is
 	require("plugins.orgmode"),
-
 	require("plugins.nvim-dap"),
-	require("plugins.nvim-dap-ui"),
+	require("plugins.nvim-dap-view"),
 	require("plugins.nvim-dap-virtual-text"),
 	require("plugins.mini"),
 	require("plugins.nvim-treesitter"),
@@ -42,7 +40,7 @@ require("lazy").setup({
 	require("plugins.vim-moonfly-colors"), -- a theme
 	require("plugins.smear-cursor"),
 
-	--	require("plugins.ale"), -- Not needed right now
+	-- require("plugins.nvim-dap-ui"), previous GUI for DAP
 	--require("plugins.git-signs"), won't bother with it rn
 }, {
 	ui = {

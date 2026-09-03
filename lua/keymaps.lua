@@ -19,8 +19,6 @@ vim.keymap.set("n", "<F10>", "<cmd>DapStepOver<CR>", { desc = "Step over" })
 vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<CR>", { desc = "Step into" })
 vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<CR>", { desc = "Step out" })
 vim.keymap.set("n", "<F12>", "<cmd>DapTerminate<CR>", { desc = "Terminate DAP session" })
--- DAP-UI
-vim.keymap.set("n", "<F2>", "<cmd>lua require('dapui').toggle()<Cr>", { desc = "Toggle dap-ui" })
 
 -- bufferline.nvim keymaps
 vim.keymap.set("n", "<leader>]", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
