@@ -49,8 +49,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			map("<leader>th", toggle_inlay_hints, "[T]oggle Inlay [H]ints")
 
 			vim.api.nvim_set_hl(0, "LspInlayHint", {
-				fg = "#204c48",
-				bg = "#080808",
+				fg = "#6272A4",
+				bg = "#282A36",
 				bold = false,
 				italic = true,
 				reverse = false,

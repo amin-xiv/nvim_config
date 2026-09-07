@@ -13,6 +13,9 @@ rtp:prepend(lazypath)
 
 require("lazy").setup({
 
+	require("plugins.dracula"), -- theme
+	require("plugins.indent-blankline"),
+	require("plugins.Hrainbow-delimiters"),
 	require("plugins.orgmode"),
 	require("plugins.nvim-dap"),
 	require("plugins.nvim-dap-view"),
@@ -37,11 +40,11 @@ require("lazy").setup({
 	require("plugins.lazy-tree"), -- Tree-like view of all plugins
 	require("plugins.cord"), -- discord presence
 	require("plugins.lazy-dev"), -- LuaLS setup stuff
-	require("plugins.vim-moonfly-colors"), -- a theme
 	require("plugins.smear-cursor"),
 
 	-- require("plugins.nvim-dap-ui"), previous GUI for DAP
 	--require("plugins.git-signs"), won't bother with it rn
+	--require("plugins.vim-moonfly-colors"), -- previous theme
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the

@@ -14,7 +14,7 @@ return {
 				"--background-index",
 				"--header-insertion=iwyu",
 				"--query-driver=/usr/bin/g++",
-				"-j=7",
+				"-j=6",
 			},
 		})
 		vim.lsp.enable("clangd")

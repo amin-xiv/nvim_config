@@ -13,6 +13,9 @@ vim.o.number = true
 
 vim.o.mouse = "a"
 
+-- Enable faster startup by caching compiled Lua modules
+vim.loader.enable()
+
 vim.o.tabstop = 4 -- Width of a tab character (display)
 vim.o.shiftwidth = 4 -- Indentation width for autoindent and << / >>
 vim.o.softtabstop = 4 -- Number of spaces inserted when pressing Tab

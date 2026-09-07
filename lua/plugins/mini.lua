@@ -25,5 +25,8 @@ return {
 
 		-- Move selected line(s) in 4 directions
 		require("mini.move").setup()
+
+		-- customizable start screen
+		require("mini.starter").setup()
 	end,
 }
