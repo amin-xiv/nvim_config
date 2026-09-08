@@ -3,6 +3,25 @@ return {
 	config = function()
 		local dap = require("dap")
 
+		local dap_file = vim.fs.find({ ".dap" }, { type = "file", limit = math.huge })
+		local args = nil
+		local program = nil
+
+		local count = 1
+		if #dap_file > 0 then
+			for line in io.lines(".dap") do
+				if count == 1 then
+					program = line
+					count = count + 1
+				elseif count == 2 then
+					args = line
+					count = count + 1
+				else
+					break
+				end
+			end
+		end
+
 		dap.adapters.gdb = {
 			type = "executable",
 			command = "gdb",
@@ -14,13 +33,13 @@ return {
 				name = "Launch",
 				type = "gdb",
 				request = "launch",
-				program = function()
+				program = not (program and args) and function()
 					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-				end,
-				args = function()
+				end or program,
+				args = not (program and args) and function()
 					local args_str = vim.fn.input("Arguments: ")
 					return vim.split(args_str, "%s+") -- split on whitespace
-				end,                   -- provide arguments if needed
+				end or args, -- provide arguments if needed
 				cwd = "${workspaceFolder}",
 				stopAtBeginningOfMainSubprogram = false,
 			},
