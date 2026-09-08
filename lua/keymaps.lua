@@ -42,7 +42,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Diagnostic related keymaps
 vim.keymap.set("n", "<space>;", "<cmd>:lua vim.diagnostic.open_float()<Cr>")
 vim.keymap.set("n", "<space>'", "<cmd>:lua vim.diagnostic.jump({count = 1})<Cr>")
-vim.keymap.set("n", "<space>t", "<cmd>:lua vim.diagnostic.goto_prev()<Cr>")
+vim.keymap.set("n", "<space>tm", "<cmd>:lua vim.diagnostic.goto_prev()<Cr>")
 
 -- todo-comments.nvim keymaps
 vim.keymap.set("n", "]uh", function()
