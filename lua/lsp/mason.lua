@@ -23,6 +23,7 @@ return {
 			"neocmake",
 			"zls",
 			"yamlls",
+			"bashls",
 		},
 	},
 }

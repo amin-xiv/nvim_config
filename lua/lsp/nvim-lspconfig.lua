@@ -26,5 +26,7 @@ return {
 		vim.lsp.enable("zls")
 
 		vim.lsp.enable("yamlls")
+
+		vim.lsp.enable("bashls")
 	end,
 }
