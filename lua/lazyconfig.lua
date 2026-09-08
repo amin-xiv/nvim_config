@@ -13,6 +13,7 @@ rtp:prepend(lazypath)
 
 require("lazy").setup({
 
+	require("plugins.auto-session"),
 	require("plugins.dracula"), -- theme
 	require("plugins.indent-blankline"),
 	require("plugins.Hrainbow-delimiters"),
