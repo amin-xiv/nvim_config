@@ -3,21 +3,28 @@ return {
 	config = function()
 		local dap = require("dap")
 
-		local dap_file = vim.fs.find({ ".dap" }, { type = "file", limit = math.huge })
+		vim.api.nvim_create_user_command("DapLoadConfig", function()
+			vim.g.load_dap_cfg = true
+			vim.cmd("Lazy reload nvim-dap")
+		end, {})
+
+		local dap_file = vim.g.load_dap_cfg and vim.fs.find({ ".dap" }, { type = "file", limit = math.huge }) or 0
 		local args = nil
 		local program = nil
 
 		local count = 1
-		if #dap_file > 0 then
-			for line in io.lines(".dap") do
-				if count == 1 then
-					program = line
-					count = count + 1
-				elseif count == 2 then
-					args = line
-					count = count + 1
-				else
-					break
+		if vim.g.load_dap_cfg then
+			if #dap_file > 0 then
+				for line in io.lines(".dap") do
+					if count == 1 then
+						program = line
+						count = count + 1
+					elseif count == 2 then
+						args = line
+						count = count + 1
+					else
+						break
+					end
 				end
 			end
 		end

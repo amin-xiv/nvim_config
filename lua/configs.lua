@@ -52,3 +52,6 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- nvim-dap(custom)
+vim.g.load_dap_cfg = false
